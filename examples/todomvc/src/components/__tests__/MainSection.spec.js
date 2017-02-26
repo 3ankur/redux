@@ -3,7 +3,7 @@ import TestUtils from 'react-addons-test-utils'
 import MainSection from '../MainSection'
 import TodoItem from '../TodoItem'
 import Footer from '../Footer'
-import { SHOW_ALL, SHOW_COMPLETED } from '../../constants/TodoFilters'
+import { SHOW_ALL, SHOW_ACTIVE, SHOW_COMPLETED } from '../../constants/TodoFilters'
 
 const setup = propOverrides => {
   const props = Object.assign({
@@ -104,7 +104,7 @@ describe('components', () => {
     })
 
     describe('todo list', () => {
-      it('should render', () => {
+      it('should render all items', () => {
         const { output, props } = setup()
         const [ , list ] = output.props.children
         expect(list.type).toBe('ul')
@@ -115,7 +115,17 @@ describe('components', () => {
         })
       })
 
-      it('should filter items', () => {
+      it('should filter active items', () => {
+        const { output, renderer, props } = setup()
+        const [ , , footer ] = output.props.children
+        footer.props.onShow(SHOW_ACTIVE)
+        const updated = renderer.getRenderOutput()
+        const [ , updatedList ] = updated.props.children
+        expect(updatedList.props.children.length).toBe(1)
+        expect(updatedList.props.children[0].props.todo).toBe(props.todos[0])
+      })
+
+      it('should filter completed items', () => {
         const { output, renderer, props } = setup()
         const [ , , footer ] = output.props.children
         footer.props.onShow(SHOW_COMPLETED)

@@ -1,7 +1,7 @@
 import React from 'react'
 import TestUtils from 'react-addons-test-utils'
-import Header from './Header'
-import TodoTextInput from './TodoTextInput'
+import Header from '../Header'
+import TodoTextInput from '../TodoTextInput'
 
 const setup = () => {
   const props = {

@@ -1,9 +1,9 @@
 import React from 'react'
 import TestUtils from 'react-addons-test-utils'
-import MainSection from './MainSection'
-import TodoItem from './TodoItem'
-import Footer from './Footer'
-import { SHOW_ALL, SHOW_COMPLETED } from '../constants/TodoFilters'
+import MainSection from '../MainSection'
+import TodoItem from '../TodoItem'
+import Footer from '../Footer'
+import { SHOW_ALL, SHOW_COMPLETED } from '../../constants/TodoFilters'
 
 const setup = propOverrides => {
   const props = Object.assign({

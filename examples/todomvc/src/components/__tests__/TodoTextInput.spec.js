@@ -1,6 +1,6 @@
 import React from 'react'
 import TestUtils from 'react-addons-test-utils'
-import TodoTextInput from './TodoTextInput'
+import TodoTextInput from '../TodoTextInput'
 
 const setup = propOverrides => {
   const props = Object.assign({

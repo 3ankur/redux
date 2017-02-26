@@ -1,7 +1,7 @@
 import React from 'react'
 import TestUtils from 'react-addons-test-utils'
-import TodoItem from './TodoItem'
-import TodoTextInput from './TodoTextInput'
+import TodoItem from '../TodoItem'
+import TodoTextInput from '../TodoTextInput'
 
 const setup = ( editing = false ) => {
   const props = {

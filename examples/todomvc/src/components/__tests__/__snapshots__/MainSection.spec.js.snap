@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MainSection Component render 1`] = `
+<section
+  className="main"
+>
+  <input
+    checked={false}
+    className="toggle-all"
+    onChange={[Function]}
+    type="checkbox"
+  />
+  <ul
+    className="todo-list"
+  >
+    <TodoItem
+      clearCompleted={[Function]}
+      completeAll={[Function]}
+      completeTodo={[Function]}
+      deleteTodo={[Function]}
+      editTodo={[Function]}
+      todo={
+        Object {
+          "completed": false,
+          "id": 0,
+          "text": "Use Redux",
+        }
+      }
+    />
+    <TodoItem
+      clearCompleted={[Function]}
+      completeAll={[Function]}
+      completeTodo={[Function]}
+      deleteTodo={[Function]}
+      editTodo={[Function]}
+      todo={
+        Object {
+          "completed": true,
+          "id": 1,
+          "text": "Run the tests",
+        }
+      }
+    />
+  </ul>
+  <Footer
+    activeCount={1}
+    completedCount={1}
+    filter="show_all"
+    onClearCompleted={[Function]}
+    onShow={[Function]}
+  />
+</section>
+`;
